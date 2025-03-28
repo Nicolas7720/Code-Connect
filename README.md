@@ -5,8 +5,11 @@ Um projeto feito com React + Vite + TypeScript, que consome uma API para exibir 
 📌 Funcionalidades
 
 ✔️ Barra lateral (estática)
+
 ✔️ Campo de busca (sem funcionalidade)
+
 ✔️ Filtro com botão "Limpar Tudo" (sem funcionalidade)
+
 ✔️ Consumo de API com fetch e .then() para exibir publicações em cards
 
 
