@@ -16,7 +16,7 @@ Um projeto feito com React + Vite + TypeScript, que consome uma API para exibir 
 
 1. Clonar o repositório
 
-git clone https://github.com/Nicolas7720/Code-Connect
+git clone https://github.com/Nicolas7720/Code-Connect/
 cd code-connect
 
 2. Instalar as dependências
