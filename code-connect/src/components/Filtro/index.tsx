@@ -6,8 +6,6 @@ const Filtro: FC = () => {
     <section className="container-filtro">
       <ul>
         <li>Programação</li>
-        <li>React</li>
-        <li>Acessibilidade</li>
       </ul>
       <button>Limpar tudo</button>
     </section>

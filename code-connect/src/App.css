@@ -7,3 +7,8 @@
 .container div {
   flex-grow: 2;
 }
+.lista-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 10%;
+}

@@ -1,40 +1,62 @@
-import { FC } from "react";
 import "./styles.css";
-import Capa from "./assets/capa.png";
 import Code from "./assets/code.svg";
 import Chat from "./assets/chat.svg";
 import Share from "./assets/share.svg";
-import Usuario from "./assets/icone.png";
+// import Usuario from "./assets/icone.png";
+// import Capa from "./assets/capa.png"
+type UsuarioProps = {
+  imagem: string;
+  nome: string;
+};
 
-const Card: FC = () => {
+export type CardProp = {
+  id: number;
+  titulo: string;
+  imagem_capa: string;
+  resumo: string;
+  linhas_de_codigo: number;
+  compartilhamentos: number;
+  comentarios: number;
+  usuario: UsuarioProps;
+};
+
+const Card = ({
+  id,
+  titulo,
+  imagem_capa,
+  resumo,
+  linhas_de_codigo,
+  compartilhamentos,
+  comentarios,
+  usuario,
+}: CardProp) => {
   return (
-    <article className="card">
+    <article className="card" key={id}>
       <div className="card__imagem">
-        <img src={Capa} alt="Imagem do post" />
+        <img src={imagem_capa} alt="Imagem do post" />
       </div>
       <div className="card__conteudo">
         <div className="conteudo__texto">
-          <h3>Titulo o post</h3>
-          <p>Resumo do post</p>
+          <h3>{titulo}</h3>
+          <p>{resumo}</p>
         </div>
         <div className="conteudo__rodape">
           <ul>
             <li>
               <img src={Code} alt="Códigos" />
-              100
+              {linhas_de_codigo}
             </li>
             <li>
               <img src={Share} alt="Compartilhamentos" />
-              12
+              {compartilhamentos}
             </li>
             <li>
               <img src={Chat} alt="Comentarios" />
-              10
+              {comentarios}
             </li>
           </ul>
           <div className="rodape__usuario">
-            <img src={Usuario} alt="imagem do usuário" />
-            @nicolas
+            <img src={usuario.imagem} alt="imagem do usuário" />@{usuario.nome}
           </div>
         </div>
       </div>
